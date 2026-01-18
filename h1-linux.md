@@ -1,5 +1,7 @@
 # Raportointi ja Linuxin asennus
-Hyvän raportin tekeminen mahdollistaa, että tehtävä voidaan suorittaa uudelleen täysin samalla tavalla. Tehtyjen toimenpiteiden lisäksi myös pienet yksityiskohdat, kuten työvaiheen suoritusaika tai omat virheet ja huomiot, tulisi merkata tarkasti raporttiin. Raportista saa helppolukuisen mm. lisäämällä väliotsikoita, ja lähteisiin pitää aina viitata, kun ei ole kyse omasta tiedosta. Asioiden sepittämisessä ei ole raportoinnissa mitään järkeä, eli ei kannata pyytää LLM:ää kirjoittamaan raporttia omasta puolesta. (Karvinen 2006.)
+
+Hyvän raportin tekeminen mahdollistaa, että tehtävä voidaan suorittaa uudelleen täysin samalla tavalla. Tehtyjen toimenpiteiden lisäksi myös pienet yksityiskohdat, kuten työvaiheen suoritusaika tai omat virheet ja huomiot, tulisi merkata tarkasti raporttiin. Raportista saa helppolukuisen mm. lisäämällä väliotsikoita, ja lähteisiin pitää aina viitata, kun ei ole kyse omasta tiedosta. Asioiden sepittämisessä ei ole raportoinnin kannalta ole mitään järkeä, eli ei kannata pyytää LLM:ää kirjoittamaan raporttia omasta puolesta. (Karvinen 2006.)
+
 Lähde: Karvinen, T. 2006. Raportin kirjoittaminen. Viitattu 18.1.2026. https://terokarvinen.com/2006/raportin-kirjoittaminen-4/
 
 ## Linuxin asentaminen

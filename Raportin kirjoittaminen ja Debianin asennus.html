@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 24.2.7.2 (Linux)"/>
+	<meta name="created" content="2026-01-18T12:30:30.912971969"/>
+	<meta name="changed" content="2026-01-18T21:01:13.616462290"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		h1 { margin-bottom: 0.08in; background: transparent; page-break-after: avoid }
+		h1.western { font-family: "Liberation Sans", sans-serif; font-size: 18pt; font-weight: bold }
+		h1.cjk { font-family: "Noto Sans CJK SC"; font-size: 18pt; font-weight: bold }
+		h1.ctl { font-family: "Noto Sans Devanagari"; font-size: 18pt; font-weight: bold }
+		h2 { margin-top: 0.14in; margin-bottom: 0.08in; background: transparent; page-break-after: avoid }
+		h2.western { font-family: "Liberation Sans", sans-serif; font-size: 16pt; font-weight: bold }
+		h2.cjk { font-family: "Noto Sans CJK SC"; font-size: 16pt; font-weight: bold }
+		h2.ctl { font-family: "Noto Sans Devanagari"; font-size: 16pt; font-weight: bold }
+		pre { background: transparent }
+		pre.western { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		pre.cjk { font-family: "Noto Sans Mono CJK SC", monospace; font-size: 10pt }
+		pre.ctl { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		h3 { margin-top: 0.1in; margin-bottom: 0.08in; background: transparent; page-break-after: avoid }
+		h3.western { font-family: "Liberation Sans", sans-serif; font-size: 14pt; font-weight: bold }
+		h3.cjk { font-family: "Noto Sans CJK SC"; font-size: 14pt; font-weight: bold }
+		h3.ctl { font-family: "Noto Sans Devanagari"; font-size: 14pt; font-weight: bold }
+		a:link { color: #000080; text-decoration: underline }
+		a:visited { color: #800000; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><h1 class="western">
+Raportointi ja Linuxin asennus</h1>
+<p>Hyvän raportin tekeminen mahdollistaa, että tehtävä voidaan
+suorittaa uudelleen täysin samalla tavalla. Tehtyjen toimenpiteiden
+lisäksi myös pienet yksityiskohdat, kuten työvaiheen suoritusaika
+tai omat virheet ja huomiot, tulisi merkata tarkasti raporttiin.
+Raportista saa helppolukuisen mm. lisäämällä väliotsikoita, ja
+lähteisiin pitää aina viitata, kun ei ole kyse omasta tiedosta.
+Asioiden sepittämisessä ei ole raportoinnissa mitään järkeä,
+eli ei kannata pyytää LLM:ää kirjoittamaan raporttia omasta
+puolesta. (Karvinen 2006.)</p>
+<p>Lähde: Karvinen, T. 2006. Raportin kirjoittaminen. Viitattu
+18.1.2026. <a href="https://terokarvinen.com/2006/raportin-kirjoittaminen-4/">https://terokarvinen.com/2006/raportin-kirjoittaminen-4/</a></p>
+<h2 class="western">Linuxin asentaminen</h2>
+<p>Latasin www.debian.org/distrib/ -sivustolta Debian live Xfce
+ISO-levykuvan, jota hyödynnän uuden VirtualBox-virtuaalikoneen
+luomisessa. 
+</p>
+<p>(12:45) Uuden virtuaalikoneen luomisessa käyttämäni asetukset:</p>
+<p><img src="./Photos/Raportin%20kirjoittaminen%20ja%20Debianin%20asennus_html_870eccdd.png" name="Image1" align="left" width="495" height="198">
+  <br clear="left"/>
+</img>
+<img src="./Photos/Raportin%20kirjoittaminen%20ja%20Debianin%20asennus_html_c370580b.png" name="Image2" align="left" width="491" height="112">
+  <br clear="left"/>
+</img>
+<img src="./Photos/Raportin%20kirjoittaminen%20ja%20Debianin%20asennus_html_a5268cdb.png" name="Image3" align="left" width="495" height="209">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>(12:55) Lisään ISO-levykuvan asennukseen myöhemmässä
+vaiheessa, sillä en halua, että VirtualBox alkaa tekemään
+asennusta puolestani (Unattended Install).</p>
+<p><img src="./Photos/Raportin%20kirjoittaminen%20ja%20Debianin%20asennus_html_50608cfd.png" name="Image4" align="left" width="503" height="277">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>(12:57) Notification centeriin tuli seuraavanlainen ilmoitus.
+Tarkistan tietokoneen UEFI/BIOS -asetuksista, onko virtualisointi
+päällä, vai onko kyse jostain muusta. 
+</p>
+<p><img src="./Photos/Raportin%20kirjoittaminen%20ja%20Debianin%20asennus_html_f05c4200.png" name="Image5" align="left" width="145" height="353">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>(13:06) Enabloin SVM-mode asetuksen BIOSista, sen pitäisi ottaa
+käyttöön CPU virtualisaatio.</p>
+<p>(13:08) Uusi errorviesti</p>
+<p><img src="./Photos/Raportin%20kirjoittaminen%20ja%20Debianin%20asennus_html_6b8bfd7c.png" name="Image6" align="left" width="141" height="366">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>(13:14) KVM virtualisaatio vaikuttaa olevan Linuxissa päällä
+oletusarvoisesti, ja käyttää ilmeisesti samaa hardware
+ominaisuutta kuin VirtualBox <a href="https://www.virtualbox.org/ticket/22248">https://www.virtualbox.org/ticket/22248</a></p>
+<p>(13:18) Ratkaisu näyttää olevan KVM-kernelmoduulin poistaminen
+tilapäisesti.</p>
+<p>(13:21) rmmod-komennolla saa disabloitua KVM-kernelmoduulin
+tilapäisesti.
+<a href="https://itsfoss.community/t/issue-with-virtual-box-7-0-on-ubuntu-22-04/12472/3">https://itsfoss.community/t/issue-with-virtual-box-7-0-on-ubuntu-22-04/12472/3</a>
+</p>
+<p>(13:25) 
+</p>
+<pre class="western">lsmod | grep kvm </pre><p>
+komennolla näen mitä kvm moduuleja kernelissä on käytössä</p>
+<p><img src="./Photos/Raportin%20kirjoittaminen%20ja%20Debianin%20asennus_html_2f197f3a.png" name="Image7" align="left" width="493" height="67">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>(13:28)</p>
+<pre class="western">sudo rmmod kvm_amd
+sudo rmmod kvm
+</pre><p>
+(13:32) Yllä olevien komentojen jälkeen sain VirtualBoxin
+käynnistymään. Ilmeisesti jokin päivitys Linuxin kerneliin tai
+Ubuntuun on tullut viimeisen vuoden aikana, sillä tälläista
+ongelmaa ei ole ennen tullut vastaan VirtualBoxia käytettässä.</p>
+<p>VirtualBox toiminnassa: 
+</p>
+<p><img src="./Photos/Raportin%20kirjoittaminen%20ja%20Debianin%20asennus_html_2d29cd0.png" name="Image8" align="left" width="494" height="433">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>(15:54) Valitsin ensin Live system (amd64) ja sitten Xfce:n
+käyttöliittymästä Install Debian</p>
+<p>- American English</p>
+<p>- Region Europe: Helsinki</p>
+<p>- Keyboard layout: Finnish</p>
+<p>- Erase disk, jätetään Encrypt system checkkaamatta</p>
+<p>- Bootloader: Master Boot Record</p>
+<p>- Name: Joonas Ristola, username: joonas, Computer Name: ahma,
+Password: *******</p>
+<p>- Do not log in automatically</p>
+<p>Yhteenveto asetuksista näyttökuvassa alla: 
+</p>
+<p><img src="./Photos/Raportin%20kirjoittaminen%20ja%20Debianin%20asennus_html_8538c3f5.png" name="Image9" align="left" width="496" height="319">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p>(16:06) Aloitin asennuksen painamalla Install</p>
+<p>(16:18) Pääsin kirjautumisruutuun, mutta ilman että VM
+käynnistyi uudelleen. Live-ympäristö ilmeisesti lukittautui,
+pääsin kirjautumaan siihen takaisin tunnuksilla “user”, “live”</p>
+<p>(16:22) Lukituksen avattuani, sain ilmoituksen onnistuneesta
+asennuksesta. Laitoin raksin ruutuun Restart Now ja painoin Done</p>
+<p>(16:26) Virtuaalikone käynnistyi uudelleen ja GRUBista valitsin
+Debian, jonka jälkeen pääsin kirjautumisruutuun. Kirjautuminen
+onnistui aiemmin luomillani käyttäjätunnuksilla.</p>
+<p><br/>
+<br/>
+
+</p>
+<h3 class="western" style="page-break-before: always">Ohjelman käyttö
+Linuxilla</h3>
+<p>Kävin läpi esiasennettuja sovelluksia, ja LibreOffice oli yksi
+niistä. Libreofficen Writer toimii hyvin samalla tavalla kuin
+Microsoftin Word, joitain toiminnallisuuksia vain puuttuu tai se
+toimii eri tavalla. Kirjoitin Hello World -dokumentin ja tallensin
+sen kotikansiooni. LibreOffice tallentaa tiedostot .odt-muotoon, ja
+LibreOfficella luotuja dokumentteja voi avata Wordilla, sekä
+päinvastoin.</p>
+<p><img src="./Photos/Raportin%20kirjoittaminen%20ja%20Debianin%20asennus_html_bbfd9c4e.gif" name="Image10" align="left" width="496" height="379">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+</body>
+</html>

@@ -15,7 +15,7 @@ Välihuomautuksena, VS-coden asentaminen nopeutti omaa workflowta huomattavasti.
 
 ### Virtuaalikoneen asetuksia
 
-![Linux Settings](/Photos/image.png)
+![Linux Settings](/Photos/h2-image.png)
 
 ## Text editorin asennus
 
@@ -30,7 +30,7 @@ Avasin micro-editorin seuraavalla komennolla:
 
     micro uusitekstitiedosto.md
 
-![Micro avattu](/Photos/image-1.png)
+![Micro avattu](/Photos/h2-image-1.png)
 
 Ctrl + S tallensi tiedoston. Ctrl + Q poistui editorista. 
 
@@ -46,7 +46,7 @@ Asensin sovellukset seuraavalla komennolla:
 
     sudo apt install git python3 ssh
 
-![alt text](/Photos/image-2.png)
+![alt text](/Photos/h2-image-2.png)
 
 Python3 oli jo asennettu, mutta git ja ssh asentuivat tarvittavien lisäosien kanssa.
 
@@ -58,7 +58,7 @@ Kolmanneksi sovellukseksi asensin ufw:n
 
 / eli Root kansio on käyttöjärjestelmän juuri. Täältä pääsee navigoimaan käyttöjärjestelmän kaikkiin kansioihin. 
 
-![Root ls](/Photos/image-3.png)
+![Root ls](/Photos/h2-image-3.png)
 
 Esimerkiksi /bin kansio sisältää mm.käyttöjärjestelmässä käytettiä komentoja. Bin on lyhenne binääristä, eli toisin sanoen tämä kansio sisältää järjestelmälle tärkeimmät binääritiedostot. (https://www.scaler.com/topics/bin-in-linux/.)
 
@@ -66,7 +66,7 @@ Esimerkiksi /bin kansio sisältää mm.käyttöjärjestelmässä käytettiä kom
 
 /home/joonas Käyttäjän kotikansioon on luotu oletuksena muutama kansio, kuten Documents, Downloads, Desktop, etc. Tähän kansioon on  oletuksena oikeus vain kansion omistajalla. 
 
-![my home folder](/Photos/image-4.png)
+![my home folder](/Photos/h2-image-4.png)
 
 /etc Etc-kansiosta löytyvät järjestelmän asetustiedot. Tarkastellaan esim passwd-tiedostoa. 
 
@@ -78,7 +78,7 @@ Tässä tiedostossa löytyvät tiedot kaikkien käyttäjien tiedot. Esim. Käytt
 
 /var/log Tässä kansiossa löytyy järjestelmän logit. Esim. VirtualBoxin Guest Additions -lisäosaa asennettaessa sen logit kirjoitettiin "vboxadd-install.log" -tiedostoon. 
 
-![var/log kansio ja vboxadd-install.log](/Photos/image-5.png)
+![var/log kansio ja vboxadd-install.log](/Photos/h2-image-5.png)
 
 ## Grep komento ja putket
 
@@ -92,7 +92,7 @@ Jotain esimerkkejä grepin käytöstä:
 
     grep joonas /etc/passwd
 
-![grep 1](/Photos/image-6.png)
+![grep 1](/Photos/h2-image-6.png)
 
     grep -E "H?llo w*" uusitekstitiedosto.md
 
@@ -100,7 +100,7 @@ Jotain esimerkkejä grepin käytöstä:
 
 Tämä ei aluksi toiminut, koska käytin pientä e-kirjainta ison E-kirjaimen sijasta. E-lipun kanssa voi käyttää haettavassa patternissa Regex:iä. 
 
-![grep 2](/Photos/image-7.png)
+![grep 2](/Photos/h2-image-7.png)
 
     apt list | grep chrome
 
@@ -119,7 +119,7 @@ i -lippua käytettäessä isoilla tai pienillä kirjaimella ei ole väliä. Koke
 
 Tämä loi uuden tiedoston, jossa grepin tulos siirtyy tiedostoon "loremipsum.md". 
 
-![grep ja putki esimerkki](/Photos/image-8.png)
+![grep ja putki esimerkki](/Photos/h2-image-8.png)
 
 (man grep, matching control.)
 
@@ -151,8 +151,10 @@ sanitize-lippu poistaa arkaluonteiset tiedot, kuten ip-osoitteet.
 
 https://linux.die.net/man/1/lshw
 
-![lshw](/Photos/image-9.png)
+![lshw](/Photos/h2-image-9.png)
 
 Tuloksessa näkyivät kaikki virtuaalikoneen virtualisoidut laitteet ja myös ne komponentit joita virtuaalikone käyttää suoraan host-koneelta. Esim. AMD Ryzen -prosessori.
 
+## EDIT 27.1.2026
 
+Changed file names of the screenshots

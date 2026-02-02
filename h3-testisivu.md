@@ -1,6 +1,6 @@
 # Hello Web Server - Apache2
 
-27.1.2026
+## 27.1.2026
 
 Asensin apachen komennolla 
 
@@ -88,9 +88,9 @@ Restarttasin apachen ja testasin sitten uudelleen. Tällä kertaa toimii.
 
 ![alt text](/Photos/h3-image-4.png)
 
-1.2.
+## 1.2.
 
-## Tehtävä X
+### Tehtävä X
 
 Tehtävänanto sivustolla https://terokarvinen.com/linux-palvelimet/
 
@@ -101,9 +101,9 @@ https://httpd.apache.org/docs/2.4/vhosts/name-based.html
 
 https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
 
-2.2. 
+## 2.2. 
 
-## Tehtävä b, tarkistetaan lokit
+### Tehtävä b, tarkistetaan lokit
 
 Sain lokit näkymään tail -f komennolla. Tällä komennolla lokit päivittyvät reaaliajassa.  
 
@@ -123,7 +123,7 @@ Avattu sivusto, käyttäjän IP-osoite - - Aika, tehty pyyntö, statuskoodi, pyy
 
 https://httpd.apache.org/docs/2.4/logs.html
 
-## Tehtävä c, hattu.example.com
+### Tehtävä c, hattu.example.com
 
 Sivua voidaan jo muokata peruskäyttäjänä, ja oletussivusto on muutettu. Http://localhost -osoitteesta pääsee jo lukemaan sivua. Vaihdan sivuston nimen.
 
@@ -149,7 +149,7 @@ Sitten laitoin sivuston käyntiin ja tarkastin sen toimivuuden.
 
 ![alt text](/Photos/h3-image-8.png)
 
-## Tehtävä e, HTML5 sivu
+### Tehtävä e, HTML5 sivu
 
 ![alt text](/Photos/h3-image-9.png)
 
@@ -157,7 +157,7 @@ Sitten laitoin sivuston käyntiin ja tarkastin sen toimivuuden.
 
 https://www.w3schools.com/hTml/html5_syntax.asp
 
-## Tehtävä f, curl 
+### Tehtävä f, curl 
 
 Curl-komento noutaa tietoa internetistä eri verkkoprotokollien avulla. 
 

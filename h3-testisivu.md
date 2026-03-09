@@ -97,6 +97,8 @@ Tehtävänanto sivustolla https://terokarvinen.com/linux-palvelimet/
 - Name-based virtual hosting mahdollistaa monen verkkosivuston pyörittämisen samalla palvelimella yhdessä IP-osoitteessa. 
 - VirtualHost -blokilla voi määrittää verkkosivuston porttinumeron, nimen, vaihtoehtoisen nimen ja missä sivusto sijaitsee palvelimella
 
+Lähteet:
+
 https://httpd.apache.org/docs/2.4/vhosts/name-based.html
 
 https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
@@ -121,7 +123,7 @@ Aika, lokin tyyppi, Process ID:Thread ID, error/viestin ID: Viesti
 
 Avattu sivusto, käyttäjän IP-osoite - - Aika, tehty pyyntö, statuskoodi, pyynnön koko, tiedot käyttäjän selaimesta ja käyttöjärjestelmästä
 
-https://httpd.apache.org/docs/2.4/logs.html
+Lähde lokien lukemisen ymmärtämiseen ja oikean login löytämiseen: https://httpd.apache.org/docs/2.4/logs.html
 
 ### Tehtävä c, hattu.example.com
 
@@ -155,7 +157,7 @@ Sitten laitoin sivuston käyntiin ja tarkastin sen toimivuuden.
 
 ![alt text](/Photos/h3-image-10.png)
 
-https://www.w3schools.com/hTml/html5_syntax.asp
+Lähde HTML5 syntaksiin: https://www.w3schools.com/hTml/html5_syntax.asp
 
 ### Tehtävä f, curl 
 

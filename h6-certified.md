@@ -1,6 +1,6 @@
 # h6 - TLS salaus
 
-Tehtävänanto sivustolla https://terokarvinen.com/linux-palvelimet/
+Tämä raportti on osa Tero Karvisen Linux-palvelimet -kurssia. Tehtävänanto sivustolla https://terokarvinen.com/linux-palvelimet/
 
 ## Tehtävä x: Lue ja tiivistä
 
@@ -48,6 +48,8 @@ Kokeilin lisätä certbotilla SSL sertifikaattia. Tarkastin mitä certbotin kome
 
     man certbot
     sudo certbot --apache -d jons.fi,www.jons.fi
+
+Lähde: man certbot, https://linuxcommandlibrary.com/man/certbot
 
 ![alt text](/Photos/h6-image-3.png)
 

@@ -1,5 +1,7 @@
 # Pilvipalvelimen vuokraus, peruskonfiguraatio ja Apachen asennus
 
+Tämä raportti on osa Tero Karvisen Linux-palvelimet -kurssia. Tehtävänanto sivustolla https://terokarvinen.com/linux-palvelimet/.
+
 ## Tehtävä a) Vuokraa virtuaalipalvelin
 
 Käytän AWS:ää pilvipalvelimen vuokraukseen. AWS tarjoaa uusille tileille 100 $:n edestä puoleksi vuodeksi ilmaista käyttöä.

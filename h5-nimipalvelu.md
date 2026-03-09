@@ -1,6 +1,6 @@
 # Nimipalvelun käyttäminen
 
-Tehtävänanto sivustolla terokarvinen.com, kohdassa h5 (Karvinen 2026, Luku h6).
+Tehtävänanto sivustolla https://terokarvinen.com/linux-palvelimet/ kohdassa h5 (Karvinen 2026, Luku h6).
 
 Olen jo aiemmin vuokrannut vuodeksi jons.fi -domainnimen. Todennäköisesti vuokraan jonkin toisenkin nimen jossain vaiheessa, mutta käytän tässä harjoituksessa kyseistä domainnimeä. Olen vuokrannut nimen joker.com -sivustolta. 
 

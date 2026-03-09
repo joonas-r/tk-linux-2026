@@ -101,4 +101,50 @@ Annoin komennolle execute oikeudet ja siirsin sen sudo mv komennolla /usr/local/
 
 Lähdeaineisto, kun halusin käyttää komennon tulosta muuttujassa: https://www.cyberciti.biz/faq/unix-linux-bsd-appleosx-bash-assign-variable-command-output/
 
+### e - Etusivu uusiksi
+
+9.3.2026 17:55
+
+Asensin uudelleen Apache2:n
+
+    sudo apt purge apache2
+    sudo apt install apache2
+
+Otin default sivun pois käytöstä: 
+
+    sudo a2dissite 000-default
+
+Uusi html-sivu omaan kotihakemistoon:
+
+    cd /home/joonas/sites
+    mkdir ai-kakone
+    cd ai-kakone
+    micro index.html
+
+![alt text](image-2.png)
+
+Tarkistin oikeudet
+
+![alt text](image-3.png)
+
+Tein name based virtual host config tiedoston.
+
+    cd /etc/apache2/sites-available
+    sudo micro ai-kakone.conf
+
+![alt text](image-4.png)
+
+Lähteet conf tiedoston tekemiseen:
+
+https://httpd.apache.org/docs/2.4/vhosts/name-based.html
+
+https://superuser.com/questions/1015922/how-to-configure-name-based-virtual-hosts-on-apache-2-4-in-linux
+
+    sudo a2ensite ai-kakone.conf
+    sudo systemctl restart apache2
+
+Tämän jälkeen http://localhost näyttää tältä:
+
+![alt text](image-5.png)
+
 

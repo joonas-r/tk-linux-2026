@@ -75,6 +75,30 @@ Testataan että toimii
 
 Lähde: https://askubuntu.com/questions/308045/differences-between-bin-sbin-usr-bin-usr-sbin-usr-local-bin-usr-local
 
-## Tehtävä d - Vanha labraharjoitus
+## Tehtävä d - Vanha labraharjoitus (Kesken)
 
-Kesken.
+9.3.2026 17:00
+
+Päätin tehdä laboratorioharjoituksen vuodelta 2024.
+
+Linkki laboratorioharjoitukseen:
+
+https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palvelimet/
+
+Tehtävä kuuluisi tehdä tyhjällä virtuaalikoneella, mutta virtuaalikoneen uudelleen asentamisessa menee sen verran aikaa, että on järkevämpää asentaa esim. apache vain uudelleen. 
+
+Tarkoitus tehdä harjoituksessa tehtävät d:stä h:n alkuosaan
+
+### d - 'howdy'
+
+Loin uuden komennon micro-editorilla:
+
+![alt text](image.png)
+
+Annoin komennolle execute oikeudet ja siirsin sen sudo mv komennolla /usr/local/bin kansioon.
+
+![alt text](image-1.png)
+
+Lähdeaineisto, kun halusin käyttää komennon tulosta muuttujassa: https://www.cyberciti.biz/faq/unix-linux-bsd-appleosx-bash-assign-variable-command-output/
+
+

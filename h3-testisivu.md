@@ -179,6 +179,8 @@ HTTP statuskoodi, Server: käytetty palvelinohjelmisto.
 
 ETag, eli entitytag on tunniste verkkosivuston versiosta, ja muuttuu aina kun verkkosivustoa muutetaan. Mahdollistaa verkkosivustojen tallentamisen asiakkaan välimuistiin, sillä se kertoo, että sivusto ei ole muuttunut. 
 
+Lähteet tehtävään f: 
+
 https://www.geeksforgeeks.org/linux-unix/curl-command-in-linux-with-examples/
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag

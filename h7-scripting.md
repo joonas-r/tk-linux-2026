@@ -147,4 +147,22 @@ Tämän jälkeen http://localhost näyttää tältä:
 
 ![alt text](image-5.png)
 
+### g - salattua hallintaa
+
+9.3.2026 18:50
+
+Host koneelta ei ollut verkkoyhteyttä virtuaalikoneeseen. 
+
+ip address -komento antoi osoitteen 10.0.2.15 jota koitin pingata host-koneellani epäonnistuneesti.
+
+Miten kuitenkin tekisin tämän tehtävän on seuraavanlaisesti:
+
+1. Asenna openssh-serveri
+
+2. Tee ulkopuolisella koneella ssh avain ssh-keygen komennolla
+
+3. Kopioi julkinen avain virtuaalikoneelle ja siitä home/joonas/.ssh/authorized_keys tiedostoon 
+
+4. Kävisin läpi /etc/ssh/sshd_config tiedoston, jotta avaimen kanssa kirjautuminen sallitaan ja salasanan kanssa kirjautuminen otetaan pois käytöstä. 
+
 

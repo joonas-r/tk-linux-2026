@@ -93,11 +93,11 @@ Tein tehtävät d-g.
 
 Loin uuden komennon micro-editorilla:
 
-![alt text](image.png)
+![alt text](Photos/h7b-image.png)
 
 Annoin komennolle execute oikeudet ja siirsin sen sudo mv komennolla /usr/local/bin kansioon.
 
-![alt text](image-1.png)
+![alt text](Photos/h7b-image-1.png)
 
 Lähdeaineisto, kun halusin käyttää komennon tulosta muuttujassa: https://www.cyberciti.biz/faq/unix-linux-bsd-appleosx-bash-assign-variable-command-output/
 
@@ -121,18 +121,18 @@ Uusi html-sivu omaan kotihakemistoon:
     cd ai-kakone
     micro index.html
 
-![alt text](image-2.png)
+![alt text](Photos/h7b-image-2.png)
 
 Tarkistin oikeudet
 
-![alt text](image-3.png)
+![alt text](Photos/h7b-image-3.png)
 
 Tein name based virtual host config tiedoston.
 
     cd /etc/apache2/sites-available
     sudo micro ai-kakone.conf
 
-![alt text](image-4.png)
+![alt text](Photos/h7b-image-4.png)
 
 Lähteet conf tiedoston tekemiseen:
 
@@ -145,7 +145,7 @@ https://superuser.com/questions/1015922/how-to-configure-name-based-virtual-host
 
 Tämän jälkeen http://localhost näyttää tältä:
 
-![alt text](image-5.png)
+![alt text](Photos/h7b-image-5.png)
 
 ### g - salattua hallintaa
 
@@ -181,27 +181,27 @@ Minulla oli jo avainpari luotuna, mutta jos tarvitsisi luoda se se kävisi ssh-k
 
     ssh-copy-id joonas-ssh@localhost
 
-![alt text](image-6.png)
+![alt text](Photos/h7b-image-6.png)
 
 Nyt ssh:lla kirjautuminen onnistui ilman salasanaa. 
 
-![alt text](image-7.png)
+![alt text](Photos/h7b-image-7.png)
 
 Kokeilin vielä tehdä ylimääräisen testikäyttäjän, jolla ei ole käytössä avainta, onnistuuko kirjautuminen.
 
-![alt text](image-8.png)
+![alt text](Photos/h7b-image-8.png)
 
-Onnistuu, eli konfiguraatiotiedostosta pitää otta salasanakirjautuminen pois käytöstä.
+Onnistuu, eli konfiguraatiotiedostosta pitää ottaa salasanakirjautuminen pois käytöstä.
 
     sudo micro /etc/ssh/sshd_config
 
 Lähde: https://help.ubuntu.com/community/SSH/OpenSSH/Configuring#disable-password-authentication
 
-![alt text](image-9.png)
+![alt text](Photos/h7b-image-9.png)
 
 Muutoksen jälkeen käynnistin sshd palvelun uudelleen ja kokeilin kirjautumista uudelleen
 
-![alt text](image-10.png)
+![alt text](Photos/h7b-image-10.png)
 
 ### h - django
 

@@ -75,7 +75,7 @@ Testataan että toimii
 
 Lähde: https://askubuntu.com/questions/308045/differences-between-bin-sbin-usr-bin-usr-sbin-usr-local-bin-usr-local
 
-## Tehtävä d - Vanha labraharjoitus (Kesken)
+## Tehtävä d - Vanha labraharjoitus
 
 9.3.2026 17:00
 
@@ -87,7 +87,7 @@ https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palveli
 
 Tehtävä kuuluisi tehdä tyhjällä virtuaalikoneella, mutta virtuaalikoneen uudelleen asentamisessa menee sen verran aikaa, että on järkevämpää asentaa esim. apache vain uudelleen. 
 
-Tarkoitus tehdä harjoituksessa tehtävät d:stä h:n alkuosaan
+Tein tehtävät d-g.
 
 ### d - 'howdy'
 
@@ -165,4 +165,44 @@ Miten kuitenkin tekisin tämän tehtävän on seuraavanlaisesti:
 
 4. Kävisin läpi /etc/ssh/sshd_config tiedoston, jotta avaimen kanssa kirjautuminen sallitaan ja salasanan kanssa kirjautuminen otetaan pois käytöstä. 
 
+Lähteet: 
 
+https://help.ubuntu.com/community/SSH/OpenSSH/Keys
+
+https://www.tecmint.com/install-openssh-server-in-linux/
+
+9.3.2026 20:35
+
+Kokeillaan vielä tätä virtuaalikoneen sisäisesti, hyödyntäen edellämainittuja lähteitä.
+
+    sudo adduser joonas-ssh
+
+Minulla oli jo avainpari luotuna, mutta jos tarvitsisi luoda se se kävisi ssh-keygen -komennolla. Kopioidaan julkinen avain ssh:n välityksellä. 
+
+    ssh-copy-id joonas-ssh@localhost
+
+![alt text](image-6.png)
+
+Nyt ssh:lla kirjautuminen onnistui ilman salasanaa. 
+
+![alt text](image-7.png)
+
+Kokeilin vielä tehdä ylimääräisen testikäyttäjän, jolla ei ole käytössä avainta, onnistuuko kirjautuminen.
+
+![alt text](image-8.png)
+
+Onnistuu, eli konfiguraatiotiedostosta pitää otta salasanakirjautuminen pois käytöstä.
+
+    sudo micro /etc/ssh/sshd_config
+
+Lähde: https://help.ubuntu.com/community/SSH/OpenSSH/Configuring#disable-password-authentication
+
+![alt text](image-9.png)
+
+Muutoksen jälkeen käynnistin sshd palvelun uudelleen ja kokeilin kirjautumista uudelleen
+
+![alt text](image-10.png)
+
+### h - django
+
+Jätän Djangon tällä kertaa välistä aikataulun takia. Asia kuitenkin kiinnostaa ja saatan jatkaa tehtävää myöhemmin.

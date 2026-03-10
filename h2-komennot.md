@@ -60,7 +60,7 @@ Kolmanneksi sovellukseksi asensin ufw:n
 
 ![Root ls](/Photos/h2-image-3.png)
 
-Esimerkiksi /bin kansio sisältää mm.käyttöjärjestelmässä käytettiä komentoja. Bin on lyhenne binääristä, eli toisin sanoen tämä kansio sisältää järjestelmälle tärkeimmät binääritiedostot. (https://www.scaler.com/topics/bin-in-linux/.)
+Esimerkiksi /bin kansio sisältää mm.käyttöjärjestelmässä käytettiä komentoja. Bin on lyhenne binääristä, eli toisin sanoen tämä kansio sisältää järjestelmälle tärkeimmät binääritiedostot. (Tarandeep singh 2023.)
 
 /home Home-kansiosta löytyy kaikkien käyttäjien kotikansiot. Virtuaalikoneellani näkyy siis vain oman käyttäjäni kansio, 'joonas'
 
@@ -72,7 +72,7 @@ Esimerkiksi /bin kansio sisältää mm.käyttöjärjestelmässä käytettiä kom
 
     cat passwd
 
-Tässä tiedostossa löytyvät tiedot kaikkien käyttäjien tiedot. Esim. Käyttäjänimi, käyttäjän ID, ensisijaisen ryhmän ID, kotihakemisto. (https://www.geeksforgeeks.org/linux-unix/understanding-the-etc-passwd-file/.)
+Tässä tiedostossa löytyvät tiedot kaikkien käyttäjien tiedot. Esim. Käyttäjänimi, käyttäjän ID, ensisijaisen ryhmän ID, kotihakemisto. (GeeksforGeeks 2025.)
 
 /media Media-kansioon ilmestyvät siirrettävät mediat. Tavallisesti hakemistossa on vain tyhjä '/joonas' -niminen kansio, mutta jos lisään Guest Additions CD:n ja mountaan sen, kansioon ilmestyy CD:llä olevat tiedot. 
 
@@ -123,8 +123,6 @@ Tämä loi uuden tiedoston, jossa grepin tulos siirtyy tiedostoon "loremipsum.md
 
 (man grep, matching control.)
 
-https://man7.org/linux/man-pages/man1/grep.1.html
-
 ## Rauta
 
 Ohjeessa mainittu komento:
@@ -149,8 +147,6 @@ sanitize-lippu poistaa arkaluonteiset tiedot, kuten ip-osoitteet.
 
 (man lshw.)
 
-https://linux.die.net/man/1/lshw
-
 ![lshw](/Photos/h2-image-9.png)
 
 Tuloksessa näkyivät kaikki virtuaalikoneen virtualisoidut laitteet ja myös ne komponentit joita virtuaalikone käyttää suoraan host-koneelta. Esim. AMD Ryzen -prosessori.
@@ -158,3 +154,13 @@ Tuloksessa näkyivät kaikki virtuaalikoneen virtualisoidut laitteet ja myös ne
 ## EDIT 27.1.2026
 
 Changed file names of the screenshots
+
+Lähdeluettelo: 
+
+Tarandeep singh 2023. Linux Binary Directories. Luettavissa: https://www.scaler.com/topics/bin-in-linux/
+
+GeeksforGeeks 2025. Understanding the /etc/passwd File. https://www.geeksforgeeks.org/linux-unix/understanding-the-etc-passwd-file/
+
+man grep s.a. Grep(1) - Linux manual page. https://man7.org/linux/man-pages/man1/grep.1.html
+
+man lshw s.a. Lshw(1) - Linux man page. https://linux.die.net/man/1/lshw

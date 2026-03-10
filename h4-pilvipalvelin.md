@@ -105,9 +105,7 @@ Tarkistetaan onko root-tili lukittu
 
         root L 2025-10-06 0 99999 7 -1
 
-L tarkoittaa että tili on lukittu.
-
-https://askubuntu.com/questions/584847/how-do-i-check-if-my-root-password-login-is-disabled
+L tarkoittaa että tili on lukittu. (AskUbuntu 2015.)
 
 Lukitsin myös oletuksena luodun tilin
 
@@ -125,7 +123,7 @@ Korjataan vielä tuo locale error,
 
         sudo dpkg-reconfigure locales
 
-https://www.cyberciti.biz/faq/perl-warning-setting-locale-failed-in-debian-ubuntu/
+(Gite 2021.)
 
 ## Tehtävä c - Asennetaan web palvelin
 
@@ -171,7 +169,7 @@ Read oikeudet eivät riittäneet. Kokeilin antaa execute-oikeudet, ja poistin re
 
 ![alt text](/Photos/h4-image-15.png)
 
-Sitten vaadittiin vielä porttien avaukset virtuaalikoneen palomuuriin ja AWS:n security groupiin. Tarkistin syntaksin wikistä: https://www.linux.fi/wiki/Ufw
+Sitten vaadittiin vielä porttien avaukset virtuaalikoneen palomuuriin ja AWS:n security groupiin. Tarkistin syntaksin wikistä: (Linux Wiki 2022.)
 
         sudo ufw allow 80
 
@@ -191,3 +189,10 @@ Suljen EC2 instanssin, ettei se kuluta turhaan resursseja...
 
 EC2 > Instances > Instance state > Stop instance
 
+Lähdeluettelo: 
+
+AskUbuntu 2015. How do I check if my root password (login) is disabled? https://askubuntu.com/questions/584847/how-do-i-check-if-my-root-password-login-is-disabled
+
+Gite, V. 2021. Perl: warning: Setting locale failed in Debian and Ubuntu. https://www.cyberciti.biz/faq/perl-warning-setting-locale-failed-in-debian-ubuntu/
+
+Linux Wiki 2022. ufw. https://www.linux.fi/wiki/Ufw

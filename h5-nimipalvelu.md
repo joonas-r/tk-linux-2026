@@ -10,7 +10,7 @@ Amazon tarjoaa omaa Amazon Route 53 -palvelua DNS:n hallintaan ja verkkoliikente
 
 Tämä palvelu ei ole "Free Tier" -tilien käytettävissä, joten en voi hyödyntää sitä tässä tehtävässä. 
 
-Löysin kuitenkin dokumentaation siitä, miten käyttää Amazon Route 53:a ulkoisen rekisteröijän domainin kanssa: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/migrate-dns-domain-in-use.html
+Löysin kuitenkin dokumentaation siitä, miten käyttää Amazon Route 53:a ulkoisen rekisteröijän domainin kanssa. https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/migrate-dns-domain-in-use.html (AWS Docs s.a.)
 
 IP-osoite vaihtuu automaattisesti, kun EC2-instanssin sammuttaa ja sulkee. IP-osoitteen voi kuitenkin säilyttää, jos käyttää AWS:n elastista IP-osoitetta (tai mahdollisesti IPv6 osoitetta). Nämä pitää määrittää virtuaalipalvelimen luonnin vaiheessa, kun määrittää mihin VPC:hen (Virtual Private Cloud) ja aliverkkoon se asetetaan. Jos palvelinta ei sammuteta, IP-osoite ei luonnollisesti vaihdu, ja reboot ei vaihda IP-osoitetta.
 
@@ -67,16 +67,13 @@ Yle.fi dig ja host
 
 ![alt text](/Photos/h5-image-6.png)
 
-Dig-komennosta huomaa yle.fi domainilla olevan 4 eri IPv4 osoitetta. Host-komennolla näemme myös IPv6 osoitteet, joita on 8 kappaletta. Sähköposti ohjataan aspmx.l.google.com kautta, ja tälle palvelulle on 5 eri vaihtoehtoista osoitetta. Vaihdoehtoiset osoitteet ovat redundanssia eli käyttövarmuutta ja kuormantasausta varten. Numero ennen osoitetta merkkaa priorityn.
+Dig-komennosta huomaa yle.fi domainilla olevan 4 eri IPv4 osoitetta. Host-komennolla näemme myös IPv6 osoitteet, joita on 8 kappaletta. Sähköposti ohjataan aspmx.l.google.com kautta, ja tälle palvelulle on 5 eri vaihtoehtoista osoitetta. Vaihdoehtoiset osoitteet ovat redundanssia eli käyttövarmuutta ja kuormantasausta varten. Numero ennen osoitetta merkkaa priorityn. (Zomaya 2020.)
 
 ![alt text](/Photos/h5-image-7.png)
 
-Dig ANY komennolla näemme myös TXT-tietueita. Näillä tekstitietueilla voidaan lisätä ylimääräistä tietoa liittyen verkkotunnukseen. Sillä voidaan esim. varmentaa verkkotunnuksen omistajuus ja tunnistautua ulkopuoliseen palveluun.
+Dig ANY komennolla näemme myös TXT-tietueita. Näillä tekstitietueilla voidaan lisätä ylimääräistä tietoa liittyen verkkotunnukseen. Sillä voidaan esim. varmentaa verkkotunnuksen omistajuus ja tunnistautua ulkopuoliseen palveluun. (Zomaya 2020.)
 
     dig yle.fi ANY
-
-
-Lähde tehtävään C: https://www.cbtnuggets.com/blog/technology/system-admin/dns-records-explained-with-examples
 
 ## Tehtävä D - SPF DMARC
 
@@ -84,15 +81,15 @@ Haaga-Helian SPF TXT-tietue
 
 "v=spf1 " "ip4:193.166.0.0/24 ip4:193.166.13.6 ip4:193.166.9.48/30 ip4:193.166.11.88 ip4:94.237.113.214 ip4:80.69.172.127 include:spf1.lnmailer.net include:spf2.lnmailer.net include:_spf.haaga-helia.fi include:spf.protection.outlook.com " "include:spf.mailjet.com " "include:mail.webropolsurveys.com  include:sendgrid.net include:hosted-at.csc.fi -all"
 
-SPF-tietue kertoo IPv4-osoitteet, jotka saavat lähettää viestejä domainin puolesta. Include:lla osoitetaan, mitkä muut domainit saavat lähettää viestejä tämän domainin puolesta. All-lippu kertoo, että mitkään muut, kuin SPF-tietueessa mainitut osoitteet ja domainit eivät saa lähettää viestejä tämän domainin puolesta.   
+SPF-tietue kertoo IPv4-osoitteet, jotka saavat lähettää viestejä domainin puolesta. Include:lla osoitetaan, mitkä muut domainit saavat lähettää viestejä tämän domainin puolesta. All-lippu kertoo, että mitkään muut, kuin SPF-tietueessa mainitut osoitteet ja domainit eivät saa lähettää viestejä tämän domainin puolesta. (CloudFlare s.a.)   
 
-SPF mahdollistaa ulkoisen sähköpostipalvelun käytön omalla domain-nimellä ilman, että kaikki viestit menisivät automaattisesti roskapostiin.
+SPF mahdollistaa ulkoisen sähköpostipalvelun käytön omalla domain-nimellä ilman, että kaikki viestit menisivät automaattisesti roskapostiin. (CloudFlare s.a.)
 
 Haaga-Helian DMARC TXT-tietue.
 
 ![alt text](/Photos/h5-image-8.png)
 
-DMARCia käytetään lähettäjän varmistamiseen ja viestin luotettavuuden varmistamiseen. 
+DMARCia käytetään lähettäjän varmistamiseen ja viestin luotettavuuden varmistamiseen (Dmarc s.a). 
 
     v=DMARC1; p=quarantine; rua=mailto:mhxubk5a@ag.eu.dmarcadvisor.com
 
@@ -102,5 +99,14 @@ p = Käytäntö "huonoille" viesteille. Tässä tapauksessa nämä menevät kara
 
 rua = Osoite, johon raportoidaan "huonoista viesteistä"
 
-Lähde: https://dmarc.org/overview/
+(Dmarc s.a.)
 
+Lähdeluettelo:
+
+AWS Docs s.a. Making Route 53 the DNS service for a domain that's in use. https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/migrate-dns-domain-in-use.html
+
+Zomaya, D. 2020. DNS Records Explained (with Examples). https://www.cbtnuggets.com/blog/technology/system-admin/dns-records-explained-with-examples
+
+CloudFlare s.a. What is a DNS SPF record. https://www.cloudflare.com/learning/dns/dns-records/dns-spf-record/
+
+DMarc s.a. Overview. https://dmarc.org/overview/

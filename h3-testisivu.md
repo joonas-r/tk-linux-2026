@@ -94,14 +94,8 @@ Restarttasin apachen ja testasin sitten uudelleen. Tällä kertaa toimii.
 
 Tehtävänanto sivustolla https://terokarvinen.com/linux-palvelimet/
 
-- Name-based virtual hosting mahdollistaa monen verkkosivuston pyörittämisen samalla palvelimella yhdessä IP-osoitteessa. 
-- VirtualHost -blokilla voi määrittää verkkosivuston porttinumeron, nimen, vaihtoehtoisen nimen ja missä sivusto sijaitsee palvelimella
-
-Lähteet:
-
-https://httpd.apache.org/docs/2.4/vhosts/name-based.html
-
-https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
+- Name-based virtual hosting mahdollistaa monen verkkosivuston pyörittämisen samalla palvelimella yhdessä IP-osoitteessa (Apache 2025a).  
+- VirtualHost -blokilla voi määrittää verkkosivuston porttinumeron, nimen, vaihtoehtoisen nimen ja missä sivusto sijaitsee palvelimella (Karvinen 2018). 
 
 ## 2.2. 
 
@@ -121,9 +115,7 @@ Aika, lokin tyyppi, Process ID:Thread ID, error/viestin ID: Viesti
     ==> apache2/other_vhosts_access.log <==
     joonas.example.com:80 127.0.0.1 - - [02/Feb/2026:10:07:52 +0200] "GET / HTTP/1.1" 304 248 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
 
-Avattu sivusto, käyttäjän IP-osoite - - Aika, tehty pyyntö, statuskoodi, pyynnön koko, tiedot käyttäjän selaimesta ja käyttöjärjestelmästä
-
-Lähde lokien lukemisen ymmärtämiseen ja oikean login löytämiseen: https://httpd.apache.org/docs/2.4/logs.html
+Avattu sivusto, käyttäjän IP-osoite - - Aika, tehty pyyntö, statuskoodi, pyynnön koko, tiedot käyttäjän selaimesta ja käyttöjärjestelmästä. (Apache 2025b.)
 
 ### Tehtävä c, hattu.example.com
 
@@ -157,7 +149,7 @@ Sitten laitoin sivuston käyntiin ja tarkastin sen toimivuuden.
 
 ![alt text](/Photos/h3-image-10.png)
 
-Lähde HTML5 syntaksiin: https://www.w3schools.com/hTml/html5_syntax.asp
+(w3schools s.a.)
 
 ### Tehtävä f, curl 
 
@@ -171,16 +163,24 @@ Hakee juuri luodun verkkosivun sisällön html muodossa.
 
     curl -I https://terokarvinen.com
 
-Hakee vastauksen palvelimelta ja näyttää sivuston metatietoja. 
+Hakee vastauksen palvelimelta ja näyttää sivuston metatietoja. (GeeksforGeeks 2025.)
 
 ![alt text](/Photos/h3-image-11.png)
 
 HTTP statuskoodi, Server: käytetty palvelinohjelmisto. 
 
-ETag, eli entitytag on tunniste verkkosivuston versiosta, ja muuttuu aina kun verkkosivustoa muutetaan. Mahdollistaa verkkosivustojen tallentamisen asiakkaan välimuistiin, sillä se kertoo, että sivusto ei ole muuttunut. 
+ETag, eli entitytag on tunniste verkkosivuston versiosta, ja muuttuu aina kun verkkosivustoa muutetaan. Mahdollistaa verkkosivustojen tallentamisen asiakkaan välimuistiin, sillä se kertoo, että sivusto ei ole muuttunut. (Mozilla s.a.)
 
-Lähteet tehtävään f: 
+Lähdeluettelo: 
 
-https://www.geeksforgeeks.org/linux-unix/curl-command-in-linux-with-examples/
+GeeksforGeeks 2025. curl Command in Linux with Examples. https://www.geeksforgeeks.org/linux-unix/curl-command-in-linux-with-examples/
 
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag
+Mozilla s.a. ETag header. https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag
+
+w3schools s.a. HTML Style Guide. https://www.w3schools.com/hTml/html5_syntax.asp
+
+Apache 2025a. Name-based virtual host support. https://httpd.apache.org/docs/2.4/vhosts/name-based.html
+
+Apache 2025b. Log Files https://httpd.apache.org/docs/2.4/logs.html
+
+Karvinen, T. 2018. Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address. https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
